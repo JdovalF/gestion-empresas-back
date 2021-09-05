@@ -8,5 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/empleado")
 public class EmpleadoController {
-
+    //TODO all
+    //TODO all/paging
+    //TODO id
+    //TODO addOrUpdate
+    //TODO delete
 }
