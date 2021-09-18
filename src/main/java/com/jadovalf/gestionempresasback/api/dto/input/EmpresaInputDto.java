@@ -2,10 +2,14 @@ package com.jadovalf.gestionempresasback.api.dto.input;
 
 import lombok.Value;
 
+import java.util.List;
+
 @Value
 public class EmpresaInputDto {
 
-    private Integer id;
-    private String nombre;
-    private String descripcion;
+    Integer id;
+    String nombre;
+    String descripcion;
+    Double potenciaContratada;
+    List<Integer> codsDepartamentos;
 }

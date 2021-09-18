@@ -3,6 +3,8 @@ package com.jadovalf.gestionempresasback.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -10,14 +12,11 @@ import javax.persistence.*;
 public class Departamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String cargo;
+    private Integer id;
+    private String nombre;
+    private String descripcion;
 
-    @ManyToOne
-    @JoinColumn(name="codEmpleado")
-    private Empleado empleado;
+    @ManyToMany(mappedBy = "departamentos")
+    private List<Empresa> empresas = new ArrayList<>();
 
-    @ManyToOne
-    @JoinColumn(name="codDepartamento")
-    private Departamento departamento;
 }
